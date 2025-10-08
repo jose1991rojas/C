@@ -4,7 +4,7 @@
  f(x,y)= sqrt(x)/pow(y,2)-1*/
  
  #include <iostream>
- #include math.h
+ #include <math.h>
  
  using namespace std;
  
@@ -12,7 +12,7 @@
  	float x, y, resultado=0;
  	
  	cout<<"Digite el valor de X: "; cin>>x;
- 	cout<<"Digite el valor de Y: "; cin>>Y;
+ 	cout<<"Digite el valor de Y: "; cin>>y;
  	
  	resultado = (sqrt(x))/(pow(y,2)-1);
  	
