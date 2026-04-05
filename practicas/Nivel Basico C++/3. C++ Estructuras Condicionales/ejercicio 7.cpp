@@ -1,44 +1,41 @@
-/*7. Escriba un programa que solicite
- una edad (un entero) e indique en la
- salida estandar si la edad introducida
-esta en el rango [18-25].*/
+/*
+7. Escriba un programa que solicite una edad (Un entero) e indique 
+en la salida estandar si la edad introducida esta en el rango [18-25].
+*/
 
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	int edad;
 	
-	cout<<"Digite su edad: "; cin>>edad;
-
-/*
-	if(edad>=18 && edad<=25){
-		cout<<"\nSu edad esta en el rango de 18-25.";
+	cout << "Digita tu edad: "; cin >> edad;
+	
+	//Dos formas de solucionar el ejercicio ambas resuelven el ejercicio.
+	
+	// Tambien se puede hacer de esta forma
+	if(edad >= 18 && edad <= 24){
+		cout << "\nEsta en el rango de [18-25]: " << edad << endl;
 	}
 	else{
-		cout<<"\nSu edad no esta en el dicho rango.";
+		cout << "\nNo esta en el rango: " << edad <<endl;
 	}
-*/
-
-
-	//Otra solucion:
 	
+	
+	
+	/* Se puede hacer de esta manera
 	switch(edad){
-		case 18:
-		case 19:
-		case 20:
-		case 21:
-		case 22:
-		case 23:
-		case 24:
-		case 25: cout<<"\nEsta en el rango indicado 18-25."; break;
-		default: cout<<"\nNo esta en el rango indicado"; break;
+		case 18: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 19: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 20: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 21: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 22: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 23: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 24: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		case 25: cout << "\nEsta en el rango de [18-25]: " << edad << endl; break;
+		default: cout << "\nNo esta em el rango [18-25]: " << edad << endl; break;
 	}
-
+	*/
 	return 0;
 }
-
-
-
-

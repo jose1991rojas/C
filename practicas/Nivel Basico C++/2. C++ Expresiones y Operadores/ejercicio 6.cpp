@@ -1,23 +1,26 @@
-/*Escriba un programa que lea la nota
-final de cuatro alumnos y calcule
-la nota final media de los cuatro
-alumnos.*/
+/*
+Ejercicio 6:
 
-#include <iostream>
+Escriba un programa que lea la nota final de cuatro alumnos y calcule la
+nota final media de los cuatro alumnos.
+*/
+
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	float a1, b2, c3, d4, media=0;
+	float alumno_1 = 0, alumno_2 = 0, alumno_3 = 0, alumno_4 = 0, media = 0;
 	
-	cout<<"Digite el valor de a1: "; cin>>a1;
-	cout<<"Digite el valor de b2: "; cin>>b2;
-	cout<<"Digite el valor de c3: "; cin>>c3;
-	cout<<"Digite el valor de d4: "; cin>>d4;
+	cout <<"Nota del alumno 1: "; cin >> alumno_1;
+	cout <<"Nota del alumno 2: "; cin >> alumno_2;
+	cout <<"Nota del alumno 3: "; cin >> alumno_3;
+	cout <<"Nota del alumno 4: "; cin >> alumno_4;
 	
-	media = ((a1+b2+c3+d4)/4);
-	
-	cout<<"\nNota final media de los 4 alumnos: "<< media<<endl;
+	//Resultados de la operacion
+	cout.precision(2);
+	media = ( alumno_1 + alumno_2 + alumno_3 + alumno_4 ) / 4;
+	cout << "\nNota final media de los 4 alumnos: "<< media;
 	
 	return 0;
 }

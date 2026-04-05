@@ -1,36 +1,35 @@
 /*
-Bloque 3. Estructuras Condicionales
 Ejercicio 10:
 
-Mostrar los meses del año, pidiendole
-al usuario un numero entre (1-12),
+Mostrar los meses del año, pidiendole al usuario
+un numero entre (1-12),
 y mostrar el mes al que corresponde.
 */
 
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	int meses=0;
+	int mes;
 	
-	cout<<"Digite un mes en numeros del 1-12.: "; cin>>meses;
+	cout << "Coloca un mes del 1 al 12: "; cin >> mes;
 	
-	switch(meses){
-		case 1: cout<<"\nEnero."<<endl; break;
-		case 2: cout<<"\nFebrero."; break;
-		case 3: cout<<"\nMarzo."; break;
-		case 4: cout<<"\nAbril."; break;
-		case 5: cout<<"\nMayo."; break;
-		case 6: cout<<"\nJunio."; break;
-		case 7: cout<<"\nJulio."; break;
-		case 8: cout<<"\nAgosto."; break;
-		case 9: cout<<"\nSeptiembre."; break;
-		case 10: cout<<"\nOctubre."; break;
-		case 11: cout<<"\nNoviembre."; break;
-		case 12: cout<<"\nDiciembre."; break;
-		default: cout<<"\nNo es un valor de un mes entre el 1-12."; break;
+	switch(mes){
+		case 1: cout << "\nEs el mes Enero. " << mes << endl; break;
+		case 2: cout << "\nEs el mes Febrero. " << mes << endl; break;
+		case 3: cout << "\nEs el mes Marzo. " << mes << endl; break;
+		case 4: cout << "\nEs el mes Abril. " << mes << endl; break;
+		case 5: cout << "\nEs el mes Mayo. " << mes << endl; break;
+		case 6: cout << "\nEs el mes Junio. " << mes << endl; break;
+		case 7: cout << "\nEs el mes Julio. " << mes << endl; break;
+		case 8: cout << "\nEs el mes Agosto. " << mes << endl; break;
+		case 9: cout << "\nEs el mes Septiembre. " << mes << endl; break;
+		case 10: cout << "\nEs el mes Octubre. " << mes << endl; break;
+		case 11: cout << "\nEs el mes Noviembre. " << mes << endl; break;
+		case 12: cout << "\nEs el mes Diciembre. " << mes << endl; break;
+		Default: cout << "\nNo es un mes> " << mes << endl; break;
 	}
-		
+	
 	return 0;
 }

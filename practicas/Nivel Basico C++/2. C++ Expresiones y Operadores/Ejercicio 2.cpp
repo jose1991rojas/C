@@ -1,23 +1,32 @@
-/*2. Escriba la siguiente expresion
-matematica como expresion en C++:
-resultado = ((a+b)/(c+d))*/
+/*
+Ejercicio 2:
+Escribe la siguiente expresión
+matematica como expresión en C++:
 
-#include <iostream>;
+resultado = x
+
+x = (a+b)/(c+d)
+*/
+
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	float a, b, c, d, resultado=0;
+	/* En vez de la variable "x" puedes usar "resultado" si asi lo deseas, solo cambia
+	las variables...*/
+	float a, b, c, d, x; 
 	
-	cout<<"Digite el valor a: "; cin>>a;
-	cout<<"Digite el valor b: "; cin>>b;
-	cout<<"Digite el valor c: "; cin>>c;
-	cout<<"Digite el valor d: "; cin>>d;
+	//Salida y entrada de datos.
+	cout << "Dame el valor para la variable a: "; cin >> a;
+	cout << "Dame el valor para la variable b: "; cin >> b;
+	cout << "Dame el valor para la variable c: "; cin >> c;
+	cout << "Dame el valor para la variable d: "; cin >> d;
 	
-	resultado = ((a+b)/(c+d));
-	
-	cout.precision(3);
-	cout<<"\n El valor del resultado es: "<< resultado<<endl; 
-	
+	//Resultado
+	cout.precision(2);
+	cout << "\nResultado de la operacion: ";
+	x = (a + b) / (c + d);
+	cout << x;
 	return 0;
 }
