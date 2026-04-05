@@ -1,39 +1,29 @@
-/*La sentencia while:
-			
-	while (expresion logica){
+/*
+	while(expresion logica){
 		conjunto de instrucciones;
-	}		
+	}
 */
 
-#include <iostream>
-#include <conio.h>
+#include<iostream>
+//#include<conio.h>
+#include<stdlib.h>
 
 using namespace std;
 
 int main(){
 	int i;
 	
-	/*
 	i= 1;
+	//i = 100;
 	
-	while(i<=10){
-		cout<<"\nEl valor de i es: "<<i;
+	while(i <= 10){
+		cout << i << endl;
 		i++;
-	}
-	*/
-	
-	//While() con iteracion negativa i:
-	
-		i= 10;
-	
-	while(i>=1){
-		cout<<"\nEl valor de i es: "<<i;
-		i--;
+		//i --;
+		
 	}
 	
-	getch();
+	system("pause");
+	//getch();
 	return 0;
 }
-
-
-

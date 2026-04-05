@@ -1,17 +1,16 @@
-//Tipos de datos basicos de C++
+//Tipos de datos basicos de c++
 
-#include<iostream>;
+#include<iostream>
 
 using namespace std;
 
-int main(){
+main(){
 	int entero = 15;
-	float flotante = 10.45;
-	double mayor = 16.3456;
-	char letra = 'A';
+	float decimal_menor =10.45;
+	double decimal_mayor = 16.3456;
+	char caracter = 'a';
 	
-	cout<<letra<<endl;
-	
+	cout<<caracter;
 	
 	return 0;
 }

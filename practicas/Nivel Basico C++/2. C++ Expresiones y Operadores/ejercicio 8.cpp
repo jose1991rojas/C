@@ -1,26 +1,25 @@
-/*Escriba un programa que lea 
-de la entrada estandar 
-los dos catetos de un triangulo
-rectangulo y escriba en la salida
-estandar su hipotenusa.*/
+/*
+Ejercicio 8:
+Escriba un programa que lea de la entrada estandar los dos catetos de un
+triangulo rectangulo
+y escriba en la salida estandar su hipotenusa.
+*/
 
-#include <iostream>
-#include <cmath> // libreria de matematicas para poder usar la funcion sqrt() para calculo de raiz cuadrada.
-	
+#include<iostream>
+#include<cmath>
 
 using namespace std;
 
 int main(){
-	float cop, cad, hipotenusa =0;
+	float co = 0, ca = 0, h = 0;
 	
-	cout<<"Digite el valor del cateto opuesto: "; cin>>cop;
-	cout<<"Digite el valor del cateto adyacente: "; cin>>cad;
+	cout << "Cateto opuesto asigne valor: "; cin >> co;
+	cout << "Cateto adyacente asigne valor: "; cin >> ca;
 	
-	hipotenusa = (cop)*(cop)+(cad)*(cad);
-	hipotenusa = sqrt(hipotenusa); // Usa la función sqrt() para sacar la raíz cuadrada
+	//Resultado de la operacion.
+	h = sqrt( pow(co , 2) + pow(ca , 2) );
 	
-	cout.precision(5);
-	cout<<"\nValor de la hipotenusa: "<<hipotenusa<<endl;
-	
+	cout.precision(2);
+	cout << "\nResultado de la hipotenusa: " << h;
 	return 0;
 }

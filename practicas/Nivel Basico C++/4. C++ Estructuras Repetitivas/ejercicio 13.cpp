@@ -1,7 +1,10 @@
-/*13. Hacer un programa que realice la serie fibonacci ---> 1 1 2 3 5 8 13...n*/
+/*
+13. Hacer un programa que realice la serie fibonacci -> 1 1 2 3 5 8 13...n
+*/
 
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
+#include<stdlib.h>
+
 using namespace std;
 
 int main(){
@@ -11,10 +14,10 @@ int main(){
 	
 	cout<<"1 ";
 	for(int i=1; i<n; i++){
-		z = x + y;//1 2 3 4 5
-		cout<<z<<" ";//1 2 3 5
-		x = y;//1 1 2
-		y=z;//1 2 3
+		z = x + y; //1 2 3
+		cout << z<< " "; //1 2 3 5 
+		x =y; //1 1 2
+		y =z; //1 2 3
 	}
 	
 	cout<<"\n";

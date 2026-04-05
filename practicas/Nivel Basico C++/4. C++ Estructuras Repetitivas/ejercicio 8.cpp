@@ -1,42 +1,29 @@
 /*
-Ejercicio 8:
+Ejercicio 8.
 Escriba un programa que calcule el valor de: 1+3+5+...+2n-1
 */
 
-#include <iostream>
-#include <conio.h>
+#include<iostream>
+#include<conio.h>
+#include<stdlib.h>
 
 using namespace std;
 
 int main(){
-    int n; 
-    int suma = 0; // CORRECCIÓN: Inicializar la suma a cero.
+	int n, suma = 0;
     
-    cout << "Digite el número de elementos impares a sumar (n): "; 
+    cout << "Digite el numero de elementos: "; 
     cin >> n;
     
-    cout << "\nSerie a sumar: ";
-    
-    // El bucle for itera 'n' veces para obtener los 'n' términos impares.
-    for(int i = 1 ; i <= n ; i++){
-        
-        // El i-ésimo término impar es (2 * i - 1)
-        int termino_impar = (2 * i) - 1;
-        
-        // 1. Acumular la suma (suma += termino)
-        suma += termino_impar;
-        
-        // 2. Mostrar la serie (opcional, para verificación)
-        cout << termino_impar;
-        if (i < n) {
-            cout << " + ";
-        }
+    // El bucle inicia en 1, llega hasta la fórmula 2n-1, 
+    // e incrementa de 2 en 2 para saltar los pares.
+    for(int i = 1; i <= (2 * n - 1); i += 2){
+        suma += i;
     }
     
-    cout << "\n----------------------------------------------------\n";
-    cout << "La suma de los primeros " << n << " elementos impares es: " << suma << endl;
-    cout << "----------------------------------------------------\n";
-    
-    getch();
-    return 0;
+    cout << "\nLa suma es: " << suma << endl;
+	
+	getch();
+	system("pause");
+	return 0;
 }

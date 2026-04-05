@@ -1,22 +1,30 @@
-/* 3. Escribe la siguiente expresion como expresion en C++: (a+(b/c))/(d+(c/f))*/
+/*
+3. Ejercicio. 
+Escribe la siguiente expresion como expresion en C++:
 
-#include <iostream>; // Son las librerias para poder generar entradas y salidas
+x = (a + (b / c) ) / (d + (e / f) )
+*/
 
-using namespace std; //Me ayuda en la agilizacion de las entradas y salidas
+#include<iostream>
 
-int main(){ //Int main() declaracion de la funcion principal
-	float a, b, c, d, f, e, resultado = 0; // Tipos de variables flotantes
+using namespace std;
+
+int main(){
+	float a, b, c, d, e, f, x = 0;
 	
-	cout<<"Digite el valor de a: "; cin>>a; //Salida y entrada de datos con cout y cin y guardado de datos en variables
-	cout<<"Digite el valor de b: "; cin>>b;
-	cout<<"Digite el valor de c: "; cin>>c;
-	cout<<"Digite el valor de d: "; cin>>d;
-	cout<<"Digite el valor de e: "; cin>>e;
-	cout<<"Digite el valor de f: "; cin>>f;
+	cout << "Ingresa el valor de a: "; cin >> a;
+	cout << "Ingresa el valor de b: "; cin >> b;
+	cout << "Ingresa el valor de c: "; cin >> c;
+	cout << "Ingresa el valor de d: "; cin >> d;
+	cout << "Ingresa el valor de e: "; cin >> e;
+	cout << "Ingresa el valor de f: "; cin >> f;
 	
-	resultado = (a+ (b/c))/(d+(e/f)); //Calculo de la interrogante
-	cout.precision(2); // Funcionalidad para tener mas o menos decimales
-	cout<<"\nEl resultado es: "<<resultado<<endl;		//imprimiendo el resultado con saltos de lineas
+	//Resultado de la operacion.
+	cout.precision(2);
+	x = (a + (b / c) ) / (d + (e / f) ); 
+	cout << "\nResultados de la Operacion: " << x;
+	
+	
 	
 	return 0;
 }

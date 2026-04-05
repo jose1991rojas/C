@@ -1,18 +1,26 @@
-// 1. Escribe la siguiente expresion como expresion en C++: a) resultado = (a/b) + 1
+/*
+1. Esccribe la siguiente expresion como expresion en C++:
 
-#include <iostream>;
+(a/b) + 1
+*/
+
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	float a, b, resultado = 0;
+	float a, b, x;
+	const int C = 1;
 	
-	cout<<"Digite el valor de a: "; cin>>a;
-	cout<<"Digite el valor de b: "; cin>>b;
+	//Pidiendo informacion en pantalla y solicitando ingreso de datos.
+	cout << "\nIngresa valor de a: "; cin >> a;
+	cout << "\nIngresa valor de b: "; cin >> b;
 	
-	resultado = (a/b) + 1;
-	
-	cout<<"\nValor del resultado es: "<<resultado<<endl;
+	//Operacion y salida de resultados.
+	cout.precision(2);
+	cout <<"\nResultado de la operacion: ";
+	x = (a/b) + C;
+	cout << x;
 	
 	return 0;
 }

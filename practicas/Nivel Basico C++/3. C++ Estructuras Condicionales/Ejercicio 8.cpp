@@ -1,27 +1,31 @@
-/*Bloque 3. Estructura condiciones.
-Ejercicio 8.
+/*
+Ejercicio 8:
+Escribe un programa que lea de la entrada estandar tres numeros.
+Despues debe leer un cuarto numero e indicar si el
+numero coincide con alguno de los 
+introducidos con anterioridad.
+*/
 
-Escribe un programa que lea de la
-entrada estandar tres numeros. Despues
-debe leer un cuarto numero e indicar si
-el numero coincide con alguno de los
-introducidos con anterioridad.*/
-
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	int n1, n2, n3, n4;
+	int n1, n2, n3, numero;
 	
-	cout<<"Digite 4 numeros: "; cin>>n1>>n2>>n3>>n4;
 	
-	if(n4==n1 || n4==n2 || n4==n3){
-		cout<<"\nSi conincide con uno de los numeros digitados."<<endl;
+	cout << "\nIntroduce 3 numeros: " << endl; cin >> n1;
+	cout << "\nIntroduce 3 numeros: " << endl; cin >> n2;
+	cout << "\nIntroduce 3 numeros: " << endl; cin >> n3;
+	cout << "\nIntroduce un 4to numero: " << endl; cin >> numero;
+	
+	
+	if( (n1 == numero) || (n2 == numero) || (n3 == numero) ){
+		cout << "\nCoincide con un numero es el: " << numero;
 	}
 	else{
-		cout<<"\nNo coincide con los numeros digitados."<<endl;
+		cout << "\nNo coincide con ningun numero el: " << numero << endl; 
 	}
-	
+		
 	return 0;
 }

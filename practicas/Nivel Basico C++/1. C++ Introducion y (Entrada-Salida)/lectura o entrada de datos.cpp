@@ -1,20 +1,20 @@
 //Lectura o entrada de datos
 
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 /*
-Asi se comentan varias lineas
-si asi lo prefieres
-es muy util esto...
+Es un comentario mas largo
+que ayuda mucho para guiarnos
+en el codigo...
 */
 
-int main (){
-	float numero; //definiendo la variable
+main (){
+	float numero; //Definiendo la variable: int o float
 	
 	cout<<"Digite un numero: ";
-	cin>>numero;  //guardando la variable
+	cin>>numero; //Guardando la variable
 	
 	cout<<"\nEl numero que digito es: "<<numero;
 	

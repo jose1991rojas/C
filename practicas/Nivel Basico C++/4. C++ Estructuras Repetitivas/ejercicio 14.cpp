@@ -1,78 +1,40 @@
-/*
-Bloque 4. Estructuras Repetitivas
-Ejercicio 14:
-Calcula las estadísticas de aprobación de 5 alumnos.
-*/
-
 #include <iostream>
-#include <stdlib.h>
 
 using namespace std;
 
-int main(){
-    
-    // Inicializar contadores para las estadísticas
-    int aprobaron_todos = 0;
-    int aprobaron_al_menos_uno = 0;
-    int aprobaron_solo_el_ultimo = 0;
+int main() {
+    float nota1, nota2, nota3;
+    int todos = 0, al_menos_uno = 0, solo_ultimo = 0;
+    int p1, p2, p3; // Banderas booleanas (1 o 0)
 
-    // Constante para el número de alumnos
-    const int NUM_ALUMNOS = 5; 
-    
-    // Asumimos que la nota mínima de aprobación es 6.0
-    const float NOTA_APROBACION = 6.0;
-
-    cout << "====================================================\n";
-    cout << "      CALCULADORA DE ESTADISTICAS DE EXAMENES       \n";
-    cout << "      (Nota minima de aprobacion: " << NOTA_APROBACION << ")         \n";
-    cout << "====================================================\n";
-
-    // Bucle FOR para iterar a través de los 5 alumnos
-    for (int i = 1; i <= NUM_ALUMNOS; i++) {
-        
-        float nota1, nota2, nota3;
-        bool ex1_aprobado, ex2_aprobado, ex3_aprobado;
-
-        cout << "\n--- Datos del Alumno " << i << " ---\n";
+    for (int i = 1; i <= 5; i++) {
+        cout << "\n--- Alumno " << i << " ---" << endl;
         cout << "Nota Examen 1: "; cin >> nota1;
         cout << "Nota Examen 2: "; cin >> nota2;
         cout << "Nota Examen 3: "; cin >> nota3;
-        
-        // 1. Determinar si cada examen fue aprobado
-        ex1_aprobado = (nota1 >= NOTA_APROBACION);
-        ex2_aprobado = (nota2 >= NOTA_APROBACION);
-        ex3_aprobado = (nota3 >= NOTA_APROBACION);
-        
-        // ------------------------------------------------------------------
-        // a) Alumnos que aprobaron TODOS los examenes (AND lógico)
-        if (ex1_aprobado && ex2_aprobado && ex3_aprobado) {
-            aprobaron_todos++;
-        }
-        
-        // ------------------------------------------------------------------
-        // b) Alumnos que aprobaron AL MENOS UN examen (OR lógico)
-        if (ex1_aprobado || ex2_aprobado || ex3_aprobado) {
-            aprobaron_al_menos_uno++;
-        }
 
-        // ------------------------------------------------------------------
-        // c) Alumnos que aprobaron UNICAMENTE el ultimo examen
-        // Debe aprobar el último (ex3_aprobado) Y NO aprobar los dos anteriores
-        if (ex3_aprobado && !ex1_aprobado && !ex2_aprobado) {
-            aprobaron_solo_el_ultimo++;
-        }
+        // 1 si aprobo (>=10), 0 si reprobo
+        p1 = (nota1 >= 10);
+        p2 = (nota2 >= 10);
+        p3 = (nota3 >= 10);
+
+        // a) Aprobaron todos: Solo suma 1 si p1, p2 y p3 son 1 (1*1*1 = 1)
+        todos += (p1 * p2 * p3);
+
+        // b) Aprobaron al menos uno: La suma p1+p2+p3 sera > 0 si paso alguno.
+        // La expresion (...) > 0 devuelve 1 si es cierto.
+        al_menos_uno += ((p1 + p2 + p3) > 0);
+
+        // c) Aprobaron unicamente el ultimo:
+        // (1 - p1) y (1 - p2) invierten el resultado (1 si reprobo, 0 si aprobo).
+        // Solo sumara 1 si reprobo los dos primeros y aprobo el ultimo (1*1*1 = 1).
+        solo_ultimo += ((1 - p1) * (1 - p2) * p3);
     }
-    
-    cout << "\n====================================================\n";
-    cout << "           RESULTADOS DE LAS ESTADISTICAS           \n";
-    cout << "====================================================\n";
-    
-    cout << "a) Alumnos que aprobaron TODOS los examenes: " << aprobaron_todos << endl;
-    cout << "b) Alumnos que aprobaron AL MENOS UN examen: " << aprobaron_al_menos_uno << endl;
-    cout << "c) Alumnos que aprobaron UNICAMENTE el ultimo: " << aprobaron_solo_el_ultimo << endl;
-    
-    cout << "====================================================\n";
-    
-    system("pause");
+
+    cout << "\n===== RESULTADOS =====" << endl;
+    cout << "a) Alumnos que aprobaron todos los examenes: " << todos << endl;
+    cout << "b) Alumnos que aprobaron al menos un examen: " << al_menos_uno << endl;
+    cout << "c) Alumnos que aprobaron unicamente el ultimo examen: " << solo_ultimo << endl;
+
     return 0;
 }

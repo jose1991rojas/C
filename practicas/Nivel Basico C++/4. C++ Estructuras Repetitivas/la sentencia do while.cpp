@@ -1,30 +1,34 @@
-/*La sentencia do while
-
+/*
 	do{
 		conjunto de instrucciones;
-	}while(){
-		conjunto de instrucciones;
-	}
-
+	}while(expresion logica);
 */
 
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
 
 using namespace std;
 
 int main(){
 	int i;
 	
-	i = 10;
+	i = 1;
+	
+	//Si quieres hacer lo opuesto
+	//i = 10;
 	
 	do{
-		cout<<i<<endl;
-		i--; //decrementa el iterador de una en una
-	}while(i>=1);
-
-	system("pause");
+		cout << i << endl;
+		i++;
+		
+	}while(i <= 10);
+	
+	//Si quieres hacer lo opuesto
+	/*
+		do{
+		cout << i << endl;
+		i--;
+		
+	}while(i >= 1);
+	*/
 	return 0;
 }
-
-

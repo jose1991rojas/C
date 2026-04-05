@@ -1,20 +1,33 @@
-/*Escribe un programa que lea de la entrada el
-precio de un producto y muestre en la salida
-estandar el precio del producto al aplicarle el IVA.*/
+/*
+Ejercicio 2:
 
-#include <iostream>;
+Escribe un programa que lea de la entrada estandar el precio de
+un producto y muestre en la salida estandar el precio del 
+producto al aplicarle el iva.
+*/
+
+#include<iostream>
 
 using namespace std;
 
 int main(){
-	float psiniva,iva,pconiva;
+	
+	float precio, iva, operacion, valor; 
+	
+	// Salidas y entradas
+	cout <<" Producto introduce su precio: "; cin >> precio;
+	
+	cout <<" Introduce el valor del iva: "; cin >> iva; 
+	
+	// Operaciones aritmeticas
+	operacion = precio * ((iva/100));
+	 
+	valor = precio + operacion; 
+	
+	cout << "\n iva: " << operacion << endl;
 
-	cout<<"Precio sin IVA: "; cin>>psiniva;
-	cout<<"\nValor del IVA: "; cin>>iva;
-	
-	pconiva = psiniva * iva;
-	
-	cout<<"\nPrecio con IVA: "<<pconiva<<endl;	
+	// Mostrando en patalla lo solicitado producto con iva.
+	cout << "\n Precio del producto + iva: " << valor << endl; 
 	
 	return 0;
 }
