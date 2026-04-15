@@ -4,7 +4,7 @@ tipo caracter cuando se espera un dato de tipo entero.*/
 
 #include <iostream>
 
-using namespace std;
+using namespace std
 
 int main(){
 	
