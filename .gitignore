@@ -1,0 +1,12 @@
+# Ignorar la carpeta IDE y todo su contenido (más simple)
+IDE/
+
+# Ignorar instaladores específicos por si están sueltos
+*Setup.exe
+*Setup.rar
+
+# Ignorar archivos ejecutables generados en cualquier carpeta
+*.exe
+
+# Ignorar archivos temporales de editores
+*.swp
