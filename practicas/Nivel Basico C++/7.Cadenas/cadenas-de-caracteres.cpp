@@ -33,7 +33,7 @@ int main(){
   // La major opcion en la actualidad es cin.getline()
   // Use mi nombre Jose ALberto Rojas Ruzza funciona perfecto
     cout << "Digita tu nombre: ";
-    cin.getline(palabra4, 30, '\n');
+    cin.getline(palabra4, 30);                   // Tambien puedes declararlo asi: cin.getline(palabra4, 30,'\n');      
 
     cout << "\n";
 
