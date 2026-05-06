@@ -22,16 +22,13 @@ int main(){
     cin.getline(nombre , 100);
 
     if(nombre[0] == 'A'){
-        strlwr(nombre[100]&);
+        strlwr(nombre);
         cout << "\n";
         cout << nombre<< endl;
     }
     else{
-        cout << "\nSu nombre no comienza con A: " << nombre << endl;
+        cout << "\nSu nombre no comienza con 'A': " << nombre << endl;
     }
-
-    cout << "\n";
-    cout << nombre[0] << endl;
 
     //getch();
     //system("pause");
